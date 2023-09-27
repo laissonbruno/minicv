@@ -1,0 +1,125 @@
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img//Icons/white/dots.svg');
+}
+
+
+.header .foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header .titulo {
+    text-align: center;
+}
+
+.informacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.informacao a {
+    text-decoration: none;
+    color: white;
+}
+
+.informacao p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+
+.informacao p::before {
+    content: url();
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;  
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.informacao .cargo::before { 
+    background-image: url('../img/Icons/colored/profile.svg');
+    
+}
+.informacao .cidade::before { 
+    background-image: url('../img/Icons/colored/location.svg');
+}
+.informacao .email::before { 
+    background-image: url('../img/Icons/colored/message.svg');
+}
+.informacao .telefone::before { 
+    background-image: url('../img/Icons/colored/whatsapp.svg');
+}
+
+
+
+/* Responsividade */
+
+@media screen and (min-width: 768px){
+    .header {
+        display: grid;
+        grid-template-areas: 
+        "foto titulo"
+        "foto informacao";
+    }
+
+    .header .foto {
+        grid-area: foto;
+        margin: 0 auto;
+    }
+    .header .titulo {
+        grid-area: titulo;
+        text-align: start;
+        max-width: 210px;
+    }
+    .header .informacao {
+        grid-area: informacao;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header {
+        display: grid;
+        grid-template-areas: 
+        "foto titulo"
+        "foto informacao";
+    }
+
+    .header .foto {
+        grid-area: foto;
+        margin: 0 auto;
+    }
+
+    .header .titulo {
+        grid-area: titulo;
+        text-align: start;
+        max-width: 250px;
+        margin: 10px;
+    }
+    .header .informacao {
+        grid-area: informacao;
+    }
+}

@@ -1,0 +1,50 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 2rem 1rem;
+}
+
+.portfolio li .titulo {
+    font-weight: 800;
+}
+
+.portfolio li a {
+    color: white;
+    text-decoration: none;
+    margin: .4rem 0 0 0;
+    font-weight: 700;
+}
+
+.portfolio li a:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+
+.portfolio h3::before {
+    content: '';
+    display: inline-block;
+    width: 1.2rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/Icons/white/github.svg);
+}
+
+
+@media screen and (max-width: 425px){
+    .portfolio li a {
+        font-size: .7rem;        
+    }
+}

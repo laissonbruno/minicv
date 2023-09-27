@@ -1,0 +1,35 @@
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.experiencia .titulo {
+    text-transform: capitalize;
+}
+
+.experiencia .data::before {
+    content: '';
+    display: inline-block;
+    width: 1.2rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/Icons/white/calendar.svg);
+}
+
+.experiencia li .data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experiencia .descricao {
+    margin: .3rem 1rem .5rem 1rem;
+    text-align: justify;
+}
+

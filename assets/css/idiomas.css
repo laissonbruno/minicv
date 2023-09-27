@@ -1,0 +1,25 @@
+.idiomas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;    
+    padding: 0;
+    margin: 0 2rem 1rem;
+}
+
+.idiomas li {
+    font-weight: 700;
+}
+
+
+.idiomas li::before {
+    content: '';
+    display: inline-block;
+    width: 1.2rem;
+    height: 0.6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/Icons/white/confirmed.svg);
+}
